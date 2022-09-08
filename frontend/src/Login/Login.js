@@ -17,8 +17,8 @@ function Login() {
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal p-0">
-                        <li><a className="text-2xl" onClick={() => navigate('./')}>登入</a></li>
-                        <li><a className="text-2xl">註冊</a></li>
+                        <li><a className="text-2xl font-semibold  text-indigo-900" onClick={() => navigate('/')}>登入</a></li>
+                        <li><a className="text-2xl font-semibold text-indigo-900" onClick={() => navigate('/signup')}>註冊</a></li>
                     </ul>
                 </div>
             </div>
@@ -29,7 +29,7 @@ function Login() {
                 {/* <Route exact path='/homepage/*' element={<Homepage />} />
     {/*Important: still've route behind homepage, should add '/*' after route path */ }
             </Routes>
-            <footer className="footer footer-center bg-base-300 text-xl">
+            <footer className="footer footer-center bg-base-300 text-xl font-semibold">
                 <div>
                     <p>WURET 111 Side-Project</p>
                 </div>
@@ -41,9 +41,6 @@ function Login() {
                 <div className='row-span-2 col-span-2 ...'>03</div>
             </div> */}
         </div >
-
-
-
     )
 }
 

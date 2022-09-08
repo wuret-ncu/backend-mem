@@ -1,22 +1,21 @@
 import React from 'react';
-import '../loginCss/signIn.scss';
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
 
-function Signin() {
+function Home() {
     const [shown, setShown] = useState(false);
     const navigate = useNavigate();
     return (
         <form >
-            <div className="hero h-full w-screen bg-base-200 ">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">We can get around that by renting instead of buying a computer. Theres more than one way to skin a cat.</p>
+            <div className="hero bg-base-200 h-full">
+                <div className="hero-content flex flex-col lg:flex-row-reverse">
+                    <div className="text-center lg:text-left basis-3/5">
+                        <h1 className="text-5xl font-bold">Home</h1>
+                       
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 basis-2/5">
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -34,11 +33,10 @@ function Signin() {
                                         <input type="checkbox" className="toggle mr-2" onChange={() => setShown(!shown)} />
                                         <span className="label-text">顯示密碼</span>
                                     </label>
-                                    
                                 </div>
                             </div>
                             <div className="form-control mt-4">
-                                <button className="btn btn-primary text-base font-italic " onClick={() => navigate('/homepage')}>立即登入</button>
+                                <button className="btn btn-primary text-base font-italic ">立即登入</button>
                                 <a href='#/forgetpw' className="link link-secondary link-hover text-center mt-3 underline">忘記密碼?</a>
                             </div>
                         </div>
@@ -49,4 +47,4 @@ function Signin() {
     )
 }
 
-export default Signin;
+export default Home;
