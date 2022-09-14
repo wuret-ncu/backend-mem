@@ -1,7 +1,6 @@
 //Import the mongoose module
 const mongoose = require('mongoose');
 
-// Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
 
 module.exports = app => {
@@ -19,3 +18,15 @@ const uri = "mongodb+srv://111SP:memorandum@memorandum.mc57kqx.mongodb.net/?retr
       process.exit();
     })
 }
+
+// Define schema
+var Schema = mongoose.Schema;
+
+var SomeModelSchema = new Schema({
+    a_string: String,
+    a_date: Date
+});
+
+// Compile model from schema
+var SomeModel = mongoose.model('SomeModel', SomeModelSchema );
+// Get Mongoose to use the global promise library
