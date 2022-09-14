@@ -13,22 +13,23 @@ const db = require('../config/db');
 router.post("/", function (req, res) {
     const { email, password } = req.body;
     console.log(1);
-    const sql = `SELECT * FROM user WHERE Email='${email}' AND Password='${password}'`;
-    const sql2 = `SELECT * FROM user WHERE Email='${email}'`;
-    db.query(sql, function (err, data, fields) {
-        if (data.length === 0) {
-            db.query(sql2, function (err, data, fields) {
-                if (data.length === 0)
-                    res.json({ error: 'Account Not Exist' });
-                else
-                    res.json({ error: 'Password Wrong' });
-            })
-        }
-        else {
-            console.log(data[0].U_Name);
-            res.json({ message: 'Login Successfully', data: data[0] });
-        }
-    });
+    res.send("aaa");
+    // const sql = `SELECT * FROM user WHERE Email='${email}' AND Password='${password}'`;
+    // const sql2 = `SELECT * FROM user WHERE Email='${email}'`;
+    // db.query(sql, function (err, data, fields) {
+    //     if (data.length === 0) {
+    //         db.query(sql2, function (err, data, fields) {
+    //             if (data.length === 0)
+    //                 res.json({ error: 'Account Not Exist' });
+    //             else
+    //                 res.json({ error: 'Password Wrong' });
+    //         })
+    //     }
+    //     else {
+    //         console.log(data[0].U_Name);
+    //         res.json({ message: 'Login Successfully', data: data[0] });
+    //     }
+    // });
     // const promise1 = new Promise((resolve, reject) => {
     //     db.query(sql, function (err, data, fields) {
     //         if (data.length === 0) {
